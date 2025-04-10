@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'Salesforce';
+    src: url('../units/fonts/SalesforceSans-Regular.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-size: 14px;
+    font-family: "Salesforce";
+    margin: 0;
+    color: #495057;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    max-width: 900px;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+.navigation .logo {
+    height: 3.5rem;
+    background: url(/units/Salesforce_logo_black.svg) no-repeat;
+    background-size: 34px 24px;
+    background-position: center left;
+    padding-top: 0.5rem;
+}
+
+/* Cover */
+
+.cover {
+    padding: 5rem 0;
+}
+
+.cover h1 {
+    margin: 0 40px 40px 0;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+}
+
+.cover h1 .sub {
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    letter-spacing: 0.3px;
+    color: #939393;
+}
+
+/* Metadata */
+
+.metadata {
+    padding: 0;
+    color: #939393;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/* Row */
+
+.row:before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+    display: inline-block;
+}
+
+/* Shortcut */
+
+.shortcut-wrap {
+    padding-top: 1.25rem;
+    margin: 0;
+}
+
+.shortcut-menus {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    -webkit-column-count: 10;
+    -moz-column-count: 10;
+    column-count: 10;
+
+    height: 232px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 4px;
+    -moz-column-gap: 4px;
+    column-gap: 4px;
+    -moz-column-fill: auto;
+    column-fill: auto;
+}
+
+
+
+@media (min-width: 544px) {
+    .shortcut-wrap .shortcut-menus {
+        height: 150px;
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 5;
+        column-fill: balance;
+    }
+}
+
+.shortcut {
+    display: block;
+    padding: 6px 0;
+    width: 100%;
+    font-size: 12px;
+    color: #a0a0a0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+}
+
+.shortcut-wrap a.shortcut .list-color {
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+/* Colorchip */
+
+.color-group {
+    padding-top: 2.5rem;
+}
+
+.color-group h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+
+@media (max-width: 543px) {
+    .color-chips {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 4px;
+        -moz-column-gap: 4px;
+        column-gap: 4px;
+        -moz-column-fill: auto;
+        column-fill: auto;
+    }
+}
+
+.color-group .color-chips:before {
+    content: " ";
+    display: table;
+    box-sizing: inherit;
+}
+
+.color-group .color-chips:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+.color-group .color-chip {
+    position: relative;
+    min-height: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+    line-height: 1.25;
+}
+
+@media (min-width: 544px) {
+    .color-group .color-chip {
+        position: relative;
+        min-height: 1px;
+        padding-right: 2px;
+        padding-left: 2px;
+        float: left;
+        width: 24%;
+    }
+}
+
+@media (min-width: 768px) {
+    .color-group .color-chip {
+        position: relative;
+        min-height: 1px;
+        padding-right: 2px;
+        padding-left: 2px;
+        float: left;
+        width: 16%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .color-group .color-chip {
+        position: relative;
+        min-height: 1px;
+        padding-right: 2px;
+        padding-left: 2px;
+        float: left;
+        width: 8%;
+    }
+}
+
+.color-chip-bg {
+    height: 80px;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.color-chip-bg:hover {
+    transform: scale(0.95);
+    transition: 0.05s;
+}
+
+.color-chip-bg.swashOut:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50%;
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    opacity: 8%;
+    border-radius: 50%;
+
+    animation: swashOut 0.2s;
+    animation-timing-function: linear;
+}
+
+
+.color-group .color-chips .color-name {
+    padding: 14px 3px 2px;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 14px;
+    color: #747474;
+}
+
+.color-group .color-chip input[type="text"] {
+    border: none;
+    background-color: transparent;
+}
+
+.color-group .color-chip input[type="text"]::selection {
+    background: #e9ecef;
+}
+
+.color-hex {
+    padding: 2px 3px;
+    width: 100%;
+    font-size: 12px;
+    color: #868e96;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* Animation */
+
+.swashOut {
+    -webkit-animation-name: swashOut;
+    animation-name: swashOut;
+}
+
+/* To Top Button */
+
+.to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 5px 10px -2px #00000030;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.to-top:hover {
+    transform: translateY(3px);
+    background-color: #f3f3f377;
+}
+
+.to-top:after {
+    content: '';
+    background: url(/units/arrow_upward.svg) no-repeat center center;
+    display: block;
+    width: 1.5rem;
+    height: 3rem;
+    margin: auto;
+}
+
+@keyframes swashOut {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
