@@ -108,8 +108,6 @@ body {
     column-fill: auto;
 }
 
-
-
 @media (min-width: 544px) {
     .shortcut-wrap .shortcut-menus {
         height: 150px;
@@ -131,6 +129,10 @@ body {
     letter-spacing: .05em;
     transition: all 0.2s ease-out;
     text-decoration: none;
+}
+
+.shortcut:hover {
+    color: #444444;
 }
 
 .shortcut-wrap a.shortcut .list-color {
