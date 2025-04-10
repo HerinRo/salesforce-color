@@ -33,7 +33,7 @@ body {
 
 .navigation .logo {
     height: 3.5rem;
-    background: url(/units/Salesforce_logo_black.svg) no-repeat;
+    background: url("units/Salesforce_logo_black.svg") no-repeat;
     background-size: 34px 24px;
     background-position: center left;
     padding-top: 0.5rem;
@@ -143,7 +143,7 @@ body {
     vertical-align: middle;
 }
 
-/* Colorchip */
+/* Color chip */
 
 .color-group {
     padding-top: 2.5rem;
@@ -309,7 +309,7 @@ body {
 
 .to-top:after {
     content: '';
-    background: url(/units/arrow_upward.svg) no-repeat center center;
+    background: url("units/arrow_upward.svg") no-repeat center center;
     display: block;
     width: 1.5rem;
     height: 3rem;
