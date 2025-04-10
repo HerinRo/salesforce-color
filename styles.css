@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Salesforce';
-    src: url('../units/fonts/SalesforceSans-Regular.ttf') format('truetype');
+    src: url('units/SalesforceSans-Regular.ttf') format('truetype');
 }
 
 html {
